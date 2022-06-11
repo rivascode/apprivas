@@ -1,7 +1,7 @@
 {
   "name": "apprivas",
   "version": "0.1.0",
-  "homepage": "http://rivascode.github.io/apprivas",
+  "homepage": "https://rivascode.github.io/apprivas",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
