@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import { NavBar } from './components/NavBar';
+
+
+export function App() {
+  const nombre = 'Persona de prueba';
+  const toDos = {
+    maniana: 'compras',
+    tarde: 'gimnasio',
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1> esta es mi app</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <NavBar />
+      <div className="main-container">
+        <div className='personal-data'>
+          <p>{nombre}</p>
+        </div>
+        <h1>To-Do</h1>
+        <hr />
+        <div className='card-container'>
+          <div className="card morning-card">
+            <span className='header'>Mañana</span>
+            <div className='main'>{toDos.maniana}</div>
+          </div>
+          <div className="card afternon-card">
+            <span className='header'>Tarde</span>
+            <div className='main'>{toDos.tarde}</div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+
 }
 
-export default App;
+
