@@ -1,14 +1,21 @@
 .App {
   text-align: center;
-  min-height: 100vh;
 }
 
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
 
 .App-header {
-  background-color: #424B54;
-  min-height: 9vh;
-  height: 9vh;
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,33 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-ion-icon{
-  font-size:2rem;
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 767px) and (min-width: 0px) {  
-  
-
-}
-
-ion-icon:hover{
-  animation-name: spin;
-  animation-duration: 200ms;
-  animation-iteration-count: unset;
-  animation-timing-function: linear;
-  
-}
-
-@keyframes spin { 
-  from { 
-      transform: rotate(0deg);
-      color: #b0bcaa; 
-  } to { 
-      transform: rotate(360deg); 
-      color: rgb(255, 255, 255);
-  }
-}
-
-
