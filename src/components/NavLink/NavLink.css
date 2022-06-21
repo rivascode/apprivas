@@ -1,0 +1,11 @@
+li{
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+li:hover{
+    color:#f18ff3;
+    text-decoration: underline 3px #D0DB97;
+    cursor: pointer;
+  }

@@ -1,0 +1,24 @@
+footer{
+    width: 100%;
+    min-height: 10vh;
+    background-color: #9c27b0;
+    bottom: 0;
+    position: fixed;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    display: flex;
+
+}
+
+.socialMediaContainer{
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+footer>p{
+    display: flex;
+    width: 68%;
+    align-items: center;
+    justify-content: flex-end;
+}

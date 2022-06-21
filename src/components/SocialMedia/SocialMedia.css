@@ -1,0 +1,21 @@
+#socialMediaIcons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#socialMediaIcons>ion-icon:hover{
+    animation: none;
+}
+
+#facebook:hover{
+    color:#0082B1;
+}
+
+#instagram:hover{
+    color:#ffac81;
+}
+
+#twitter:hover{
+    color:#1DE9B6;
+}

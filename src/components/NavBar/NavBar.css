@@ -1,0 +1,43 @@
+.App-header>.menu-ecommerce{
+    bottom: 0;
+  }  
+  .menu-ecommerce{
+    width: 100vw;
+    background-color: #0082b1;
+  }
+  
+  .menu-ecommerce>nav{
+    width: 100%;
+  }
+  .menu-ecommerce>nav>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+  }
+
+  ul{
+    list-style: none;
+  }
+  
+  .menu-ecommerce>nav>ul>li{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  @media only screen and (max-width: 767px) and (min-width: 0px) {  
+    .menu-ecommerce>nav>ul>li{
+      display: none;
+    }
+  } 
+
+  
+  .menu-ecommerce>nav>ul>li:hover{
+    color:#FFEC51;
+    text-decoration: underline 3px #FFAC81;
+  }

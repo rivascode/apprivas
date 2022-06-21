@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/apprivas/static/css/main.073c9b0a.css",
+    "main.js": "/apprivas/static/js/main.20fbd10f.js",
+    "static/js/787.1c10fb14.chunk.js": "/apprivas/static/js/787.1c10fb14.chunk.js",
+    "static/media/logo.svg": "/apprivas/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/apprivas/index.html",
+    "main.073c9b0a.css.map": "/apprivas/static/css/main.073c9b0a.css.map",
+    "main.20fbd10f.js.map": "/apprivas/static/js/main.20fbd10f.js.map",
+    "787.1c10fb14.chunk.js.map": "/apprivas/static/js/787.1c10fb14.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.20fbd10f.js"
+  ]
+}

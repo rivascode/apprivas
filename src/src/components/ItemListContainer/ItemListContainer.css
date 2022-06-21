@@ -1,0 +1,11 @@
+.itemListCont{
+    background-color: #1DE9B6;
+}
+
+.itemListCont>h1{
+    color: white;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
