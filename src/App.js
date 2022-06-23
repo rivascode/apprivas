@@ -1,10 +1,11 @@
+
 import './App.css';
-import { CounterApp } from './Components/Counter/Counter';
+import  ItemListContainer  from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
-      <CounterApp value={0} stock={10}/>      
+      <ItemListContainer greeting="Hola che"/>
     </div>
   );
 }
