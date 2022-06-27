@@ -1,0 +1,12 @@
+.itemDetail{
+    background-color: yellow;
+    width: max-content;
+    display:flex;
+    flex-direction: column;
+}
+
+.itemDetail>img{
+    width: 22%;
+    height: 5vh;
+    margin: 0 auto;
+}
