@@ -1,12 +1,19 @@
-
-import './App.css';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Heroes from './components/Heroes';
+import ItemListContainer from './components/ItemListContainer';
+import Rutas from './routes/Rutas';
 
 function App() {
+
   return (
-    <div className="App">
-      <ItemDetailContainer/>
-    </div>
+    <>
+      <Rutas />
+{/*       <Navbar />
+      <Heroes />
+      <ItemListContainer greeting = {"PRODUCTOS DESTACADOS"} />
+      <Footer /> */}
+    </>
   );
 }
 
