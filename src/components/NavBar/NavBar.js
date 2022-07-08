@@ -1,18 +1,52 @@
-import './NavBar.css'
-import CartWidget from '../CartWidget/CartWidget'
-import { NavLink, Link } from 'react-router-dom'
 
-const NavBar = ({products}) => {
+import { Nav, NavLink, Bars, NavMenu, NavBtn } from './NavbarElements.js';
+import UserAvatar from "../UserAvatar/UserAvatar";
+import CartWidget from "../CartWidget/CartWidget";
+import Badge from '@mui/material/Badge';
+import logo from '../../images/logo.png';
+import React, { useContext } from 'react';
+import { CartContext } from '../../CartContext';
+
+const Navbar = () => {
+    const {cartItems} = useContext(CartContext);
+
+    const cartQty = () => {
+      let qty = 0;
+      cartItems.map((item) => (
+        qty += item.qty 
+      ))
+
+      return qty;
+    }
+
     return (
-        <nav className="Navbar">
-            <Link to="/" className="brand">Oettel Store</Link>
-            {/* <NavLink to="/accesorios" activeClassName="NavLink">Accesorios</NavLink>
-            <NavLink to="/lentes" activeClassName="NavLink">Lentes</NavLink>
-            <NavLink to="/relojes" activeClassName="NavLink">Relojes</NavLink> */}
-            {products.map(cat => <NavLink key={cat.id} to={`/category/${cat.category}`} className="link">{cat.category}</NavLink>)}
-            <CartWidget />
-        </nav> 
+      <Nav>
+        <NavLink to='/' >
+            <img src={logo} alt='logo' />
+        </NavLink>
+        <Bars />
+        <NavMenu>
+          <NavLink to='/category/figures'>
+            Action Figures
+          </NavLink>          
+          <NavLink to='/category/outlet' >
+            Outlet
+          </NavLink>
+          <NavLink to='/contact' >
+            Contact Us
+          </NavLink>
+          <NavLink to='/about'>
+            About
+          </NavLink>
+        </NavMenu>
+        <NavBtn  to='/cart/'>
+          <Badge badgeContent={cartQty()} color="primary" sx={{marginTop: "14px"}}>
+            <CartWidget/>{" "}
+          </Badge>
+          <UserAvatar/>
+        </NavBtn>    
+      </Nav>
     )
-}
+};
 
-export default NavBar
+export default Navbar;

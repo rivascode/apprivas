@@ -1,45 +1,8 @@
-/* CSS PARA ITEM CONTAINER */
-.Card{
-    width: 200px;
-    border: 1px solid grey;
-    margin: 10px;
-    background-color: rgb(141, 216, 145);
-    padding: 10px;
-}
-.Card__btn{
-    color: black;
-    text-decoration: none;
-    background-color: white;
-    font-size: 20px;
-    padding: 10px;
+.discount {
+	font-size: small !important;
+    color: darkgrey;
 }
 
-
-/* CSS PARA ITEM DETAIL */
-
-/* .Card{
-    width: 100%;
-    border: 1px solid grey;
-    margin: 10px;
-    background-color: rgb(141, 216, 145);
-    padding: 10px;
-    display: flex;
+.button-rounded{
+  border-radius: 6 !important;
 }
-.Card__info{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.Card__info--title{
-    font-size: 30px;
-    font-weight: 600;
-}
-.Card__info--description{
-    font-size: 20px;
-    width: 300px;
-    align-self: center;
-}
-.Card__info--price{
-    font-size: 30px;
-    font-weight: 600;
-} */

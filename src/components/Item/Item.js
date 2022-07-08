@@ -1,34 +1,57 @@
-import './Item.css'
-import { NavLink } from 'react-router-dom'
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import {Button, CardActionArea, CardActions} from '@mui/material';
+import { CartContext } from '../../CartContext';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import './Item.css';
 
+const Item = (props) => {
+  const { item } = props;
+  const {onAdd} = useContext(CartContext);
 
-// const products = [
-//         {id: 1, category:"Accesorios", title:"Aritos", description:"Colores varios", details:"Neque quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit", price:300, stock:5, pictureUrl:'../../../assets/media/aritos.webp'},
-//         {id: 2, category:"Lentes", title:"Anteojos", description:"Antireflejo", details:"Neque quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit", price:500, stock:15, pictureUrl:'../../assets/media/anteojos.webp'},
-//         {id: 3, category:"Relojes", title:"Reloj Dama", description:"Sumergible", details:"Neque quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit", price:800, stock:30, pictureUrl:'../../assets/media/reloj-dama.webp'}
-//         ]
+  const ApplyDiscount = (price) => {
+    let discount = price - (price * 0.10);
+    return discount.toFixed(2);
+  };
 
-const Item = ({item}) => {
-
-
-    if(!item){
-        return(<h1>Cargando...</h1>)
-    }
-    
-    return(
-        <div className="Card">
-            <div className="Card__info">
-                <p className="Card__info--title"><strong>{item?.title}</strong></p>
-                <img src={item?.pictureUrl} alt="imagen" style={{width: "150px"}}></img>
-                <p><strong>{item?.description}</strong></p>
-                <p className="Card__info--price">Precio: <strong>${item?.price}</strong></p>
-                {/* <button className="Card__btn">Ver detalles</button> */}
-                {/* {detail.map(detail => <NavLink to={`/item/${detail.id}`} className="Card__btn">Ver detalles</NavLink>)} */}
-                <NavLink to={`/item/${item.id}`} className="Card__btn">Ver detalles</NavLink>
-                <p>Stock: {item?.stock}</p>
-            </div>
-        </div>
-    )
+  return (
+    <Card sx={{ maxWidth: 300 }}>
+      <CardActionArea>
+      <Link
+          to={`/figures/${item.id}`}
+          style={{ textDecoration: 'none'}}
+      >
+        <CardMedia component='img' image={item.image} alt={item.name}/>
+        <CardContent sx={{alignContent: "center" }} >
+          <Typography align='center' variant='body2' color="text.secondary" component="div" style={{ minHeight: "60px" }}  >
+            {item.name}<br/><br/>
+          </Typography>
+          <Typography align='center' variant='h6' color='darkblue' marginBottom={1} component="div">
+            $ {item.sale === "true" ? ApplyDiscount(item.price) : item.price.toFixed(2)}  <del className='discount'>{item.sale === "true" ? item.price.toFixed(2) : ""} </del>
+          </Typography>
+          <Typography align='center'  variant='subtitle2' color="text.secondary" >
+            <b>6</b> cuotas sin interes de <b>${(item.price / 6).toFixed(2)}</b>
+          </Typography>
+        </CardContent>
+      </Link>
+      </CardActionArea>
+      <CardActions>
+           
+          <Button 
+              sx={{ borderRadius: 6, background: '#0a0032', width: "100%"}}
+              startIcon={<ShoppingCartIcon />}  	
+              variant="contained"            
+              onClick={() => onAdd(item)}             
+          >
+            Add To Cart
+          </Button>
+    </CardActions>      
+	</Card>
+  );
 }
 
-export default Item
+export default Item;

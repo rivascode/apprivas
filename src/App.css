@@ -1,10 +1,17 @@
-.App {
-  text-align: center;
+.App{
+  justify-content:start;
 }
-
+.App-body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Montserrat';
+}
 .App-header {
   background-color: #282c34;
-  min-height: 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,3 +19,54 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.App-link {
+  color: #61dafb;
+}
+.UserSection {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 30px;
+  margin-left: 10%;
+  margin-bottom: 30px;
+  margin-right: 10%;
+}
+.CounterSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 20vh;
+	font-size: 24px;
+	border: 2px solid black;
+	padding: 20px;
+	background-color: rgb(239, 246, 208);
+	margin-top: 20px;
+}
+
+.btn-section {
+	display: flex;
+	width: 200px;
+	justify-content: space-around;
+}
+
+.title {
+  display: flex;
+  justify-Content: center;
+  align-Items: center;
+  font-family: "Montserrat";
+}
+
+.warning {
+  text-align: center;
+  justify-Content: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
