@@ -44,7 +44,7 @@ Para el desarrollo de la aplicación se utilizó la librería de JavaScript [Rea
 Para el diseño y estilos se utilizó [React-Bootstrap](https://react-bootstrap.github.io/) con un diseño responsive, iconos de [Bootstrap](https://icons.getbootstrap.com/), tipografías de [Google Fonts](https://fonts.google.com/)  y otros ajustes fueron personalizados en el archivo estilos.css 
 
 ### Recorrido por el Sitio
-
+![video-gif](https://github.com/rivascode/apprivas/blob/master/GalantryMan.gif)
 
 ------------------------------------------
 El header es sticky y contiene una barra de navegación con los siguientes vínculos: 
