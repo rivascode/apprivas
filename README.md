@@ -46,9 +46,7 @@ Para el diseño y estilos se utilizó [React-Bootstrap](https://react-bootstrap.
 ### Recorrido por el Sitio
 
 
------------------------------------------- 
-## Estructura del Sitio
-### Header
+------------------------------------------
 El header es sticky y contiene una barra de navegación con los siguientes vínculos: 
 
 - Isologo.
