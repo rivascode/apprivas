@@ -1,0 +1,38 @@
+.imgCart {
+  width: 5%;
+  float: left;
+  margin: 10px;
+}
+.itemsCart {
+  padding: 10px;
+}
+
+.itemsart li{
+  list-style-type: none;
+  list-style: none;
+}
+
+.itemsCart p {
+  margin-top: 16px;
+  font-weight: bold;
+  float: left;
+}
+
+#TrashBin{
+  display: inline-block;
+  width:25px;
+  vertical-align: center;
+  border-color: red;
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+#imgTrashBin {
+  color: red;
+  font-size: 1em;
+  vertical-align: center;
+}
+
+.StockQuantityNote p{
+  font-size: 0.8em;
+}

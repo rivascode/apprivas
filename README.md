@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Projecto Final del Curso React de CoderHouse 2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inicializando el proyecto
+Lo **primero** que se puede hacer para obtener el proyecto es clonarlo a través de [GitHub](https://github.com), especificamente para éste proyecto a través de: 
 
-## Available Scripts
+```bash
 
-In the project directory, you can run:
+git clone https://github.com/rivascode/apprivas
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Luego se debe instalar la versión npm recomendada, en caso de no tenerlo:
 
-### `npm test`
+```bash
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+nvm install
 
-### `npm run build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Instalar las dependencias:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Por último iniciar el servidor:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+Para visualizar el proyecto en el navegador, una vez instalado, abrir mediante [http://localhost:3000](http://localhost:3000) 
 
-## Learn More
+## Concepto del Proyecto
+Esta pagina fue realizada durante el curso de Javascript de CoderHouse y luego se ha creado una aplicación ecommerce acorde con los lineamientos, desafíos y rubricas que se nos fueron presentando el curso de React de CoderHouse.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Es la pagina de un familiar que es fabricante de ropa masculina: Galantry Man.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para el desarrollo de la aplicación se utilizó la librería de JavaScript [React](https://es.reactjs.org/) 
+Para el diseño y estilos se utilizó [React-Bootstrap](https://react-bootstrap.github.io/) con un diseño responsive, iconos de [Bootstrap](https://icons.getbootstrap.com/), tipografías de [Google Fonts](https://fonts.google.com/)  y otros ajustes fueron personalizados en el archivo estilos.css 
 
-### Code Splitting
+### Recorrido por el Sitio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+------------------------------------------ 
+## Estructura del Sitio
+### Header
+El header es sticky y contiene una barra de navegación con los siguientes vínculos: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Isologo.
+- Tienda ecommerce con una barra de navegacion desplegable que discrimina por categorías de productos.
+- Catálogo online descargable.
+- Contacto que contiene un formulario de consultas y otros datos de contacto.
+- Mayoristas que contiene un formulario de contacto para quienes quisieran hacer este tipo de compras o reventa de los productos.
+- LogIn de usuario para consultar compras realizadas y datos del cliente (aun no implementado).
+- Carrito de compras que guía el proceso de realizar una compra en la tienda. 
+Contiene formulario para finalizar la compra de los productos seleccionados, muestra el detalle de la compra realizada y luego el código correspondiente a esa compra. 
+- Buscador (aun no implementado).
 
-### Making a Progressive Web App
+### Body
+Es el lugar donde se despliega el contenido de las diferentes secciones. 
+Por defecto cuando la ruta es ' / ' donde se muestra el home o pagina de inicio. 
+Otras opciones de contenido de la pagina son:
+- tienda ecommerce cuya ruta es '/tienda' 
+- catalogo online descargable cuya ruta es ' /catalogo ' 
+- contacto cuya ruta es ' /contacto'  y
+- mayoristas cuya ruta es ' /mayoristas ' 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Footer
+Se encuentra presente en la navegacion de todas las secciones del sitio. 
+Contiene 4 divisiones con los siguientes vínculos: 
+1) Isologo que redirige a la pagina de inicio,
+2) Links Utiles:
+- FAQ - Preguntas frecuentes,
+- Atención al cliente, que conduce al formualrio de contacto,
+- Envíos y Devoluciones,
+- Términos y Condiciones, y 
+- Mapa del sitio (aun no se ha desarrollado).
+3) Formas de contacto: ubicacion en google maps, chat con whatsapp web y redireccionamiento para enviar correos electronicos.
+4) Suscripción al Newsletter
 
-### Advanced Configuration
+------------------------------------------ 
+## Navegación por la Tienda
+El contenido que se muestra en la tienda es el catálogo completo de todos los productos. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Categorías
+Se puede acceder a las diferentes categorias de los productos a traves de la barra de navegacion desplegable en el header o a traves del navegador ubicado a la izquierda dentro de la pagina de inicio.
 
-### Deployment
+### Ítem
+Cada producto se presenta en un bloque que contiene: la imagen del producto, su nombre, una breve descripción, precio, aviso de disponibilidad de stock y un botón para acceder a mayores detalles del producto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Detalle del ítem
+En esta sección se filtra el catálogo por el id del producto que se desea ver. Se muestra un solo bloque en pantalla que contiene: la imagen del producto en un mayor tamaño, nombre y descripción detallada del prodcuto, precio,  botones para seleccionar cantidad deseada y un botón para agregar al carrito.
 
-### `npm run build` fails to minify
+Una vez presionado el boton "agregar al carrito", se agrega el id y categoria del producto y otro botón para "terminar la compra".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Carrito
+Esta sección muestra el detalle de cada ítem agregado al carrito. 
+El detalle incluye: una pequeña imagen del producto, su nombre, precio, las unidades del producto dispobibles en stock, la cantidad del producto seleccionada, el subtotal por la compra de ese o esos productos y un icono de cesto para eliminar el producto del carrito si se quisiese. Tambien se puede modificar la cantidad de productos deseados al clickear nuevamente la imagen del producto.
+
+Al final del detalle de productos, se visualiza el monto total a pagar y 3 botones: uno que permite borrar todos los productos del carrito y vaciarlo, otro para "seguir comprando" otros productos en la tienda y un último botón, que permite "finalizar la compra" a traves de un formulario que se abre debajo.
+
+### Formulario de Compra y Número Orden
+El formulario presenta 12 campos para que el usuario ingrese sus datos personales y si lo desea, alguna observación. Si se completan todos los campos requeridos, se muestra el botón "Pagar". 
+Una vez procesado el pago se genera una orden de compra en la base de datos y se muestra al usuario el código de identificacion correspondiente a su compra junto al monto total abonado. 
+Se ha agregado la opcion de salida, redireccionando a la pagina de inicio a través del botón "Volver al Home".
